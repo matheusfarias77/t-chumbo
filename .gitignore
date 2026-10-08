@@ -12,3 +12,5 @@ ehthumbs.db
 scratch/
 .system_generated/
 assets/img/novas-fotos/
+.vercel
+.env*
