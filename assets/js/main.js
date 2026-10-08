@@ -202,11 +202,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fade-up suave e discreto para grids de conteúdo
   const fadeUpTargets = [
-    '.editorial-grid',
+    '.levels-grid',
+    '.editorial-layout',
     '.structure-grid',
     '.spots-grid',
-    '.gallery-grid',
-    '.experience-editorial-grid'
+    '.gallery-grid'
   ];
 
   fadeUpTargets.forEach(selector => {
