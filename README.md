@@ -1,73 +1,71 @@
-# 🏄 T-Chumbo Surf — Landing Page Oficial
+# 🏄 T-Chumbo Surf — Landing Page Oficial (Ocean Performance Redesign)
 
-> **O mar é o limite. Nós te levamos até a onda.**  
-> Landing page oficial e moderna da **T-Chumbo Surf**, especializada em **Tow-in Surf** (surf rebocado com jet ski), operando nas melhores bancadas de **Saquarema** e **Barra da Tijuca (RJ)**.
-
----
-
-## 🌊 Sobre a T-Chumbo Surf
-
-A **T-Chumbo Surf** proporciona a experiência definitiva no surf de alta velocidade e adrenalina. Com apoio náutico completo de jet ski e pilotos experientes, os praticantes superam os limites da remada tradicional, pegando mais ondas, atingindo o posicionamento exato no pico e contando com resgate imediato no sled em qualquer situação.
+> **A emoção das grandes ondas. A experiência de quem vive o surf.**  
+> Landing page oficial da **T-Chumbo Surf**, posicionada como uma experiência premium e cinematográfica de **Tow-in Surf** (surf rebocado), destacando a autoridade da **família Chumbo** no universo das ondas grandes, estrutura náutica profissional e operações na **Barra da Tijuca (Rio de Janeiro)** e em **Saquarema (RJ)**.
 
 ---
 
-## 🚀 Principais Recursos do Site
+## 🌊 Conceito: Ocean Performance
 
-- **Hero Cinematográfica:** Tela cheia com visual aéreo autêntico de Saquarema, destaques operacionais e botões diretos de agendamento.
-- **O que é Tow-in Surf:** Explicação objetiva destacando aceleração, posicionamento e volume de ondas por sessão.
-- **Como Funciona:** Passo a passo da experiência (01 Briefing, 02 Saída, 03 Reboque & Drop, 04 Resgate no Sled).
-- **A Experiência T-Chumbo:** Pilares de segurança náutica, instrução personalizada, equipamentos profissionais e aprendizado do zero.
-- **Para Quem É:** Atendimento segmentado para iniciantes no tow-in, surfistas tradicionais em evolução e amantes de adrenalina.
-- **Saquarema & Barra da Tijuca:** Destaque para as características marítimas das duas bases operacionais no Rio de Janeiro.
-- **Galeria Real:** Fotos 100% autênticas da equipe e das bancadas com modal lightbox responsivo.
-- **FAQ:** Accordion interativo esclarecendo as dúvidas mais comuns.
-- **Integração WhatsApp:** Botões de conversão e botão flutuante com mensagem pré-formatada direta para o número oficial `(21) 97472-5674`.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5 Semântico:** Marcação estruturada, meta tags SEO, OpenGraph e dados estruturados Schema.org (`SportsActivityLocation`).
-- **CSS3 Vanilla Puro:** Design tokens, paleta com gradientes oceânicos e verde neon, glassmorphism (`backdrop-filter`), tipografia fluida com `clamp()`.
-- **JavaScript Vanilla:** Drawer mobile acessível, FAQ accordion, galeria com lightbox e scroll reveal leve.
-- **Mobile-First:** Totalmente responsivo e otimizado para dispositivos a partir de 320px de largura.
+O redesign adota a estética editorial de marcas internacionais de referência no oceano, com foco em:
+- **Fotografia 100% Real:** Protagonismo visual para as fotografias autênticas de Gustavo Chumbão, sessões com jet ski, drops em alta velocidade e bancadas clássicas de Saquarema.
+- **Paleta Oficial:**
+  - Azul oceano profundo: `#07131E`
+  - Azul secundário: `#12334B`
+  - Branco gelo: `#F5F5F0`
+  - Azul de destaque: `#54BDE5`
+- **Ritmo Editorial:** Alternância sofisticada entre seções escuras oceânicas e seções claras contrastantes, sem poluição de cards genéricos, bordas neon ou sombras pesadas.
+- **Performance & Fluidez Mobile:** Remoção de pins pesados de scroll, zooms contínuos e paralaxes invasivos, mantendo interações instantâneas, leves e respeitosas a `prefers-reduced-motion`.
 
 ---
 
-## 💻 Como Rodar Localmente
+## 📸 Mapeamento das Novas Fotografias Reais
 
-Basta servir os arquivos estáticos com qualquer servidor web HTTP local:
+1. **Hero Cinematográfico:** `assets/img/towin-saquarema-action.jpg`  
+   *Sessão real de tow-in em Saquarema com surfista dropando a onda, piloto de jet ski no canal e a Igreja de Nazaré ao fundo.*
+2. **Legado da Família Chumbo:** `assets/img/chumbao-beach-jetski.jpg`  
+   *Fotografia editorial de Gustavo Chumbão cumprimentando surfista na praia ao lado da embarcação profissional equipada com sled e prancha.*
+3. **Estrutura Profissional:** `assets/img/chumbao-water-session.jpg`  
+   *Vivência e acompanhamento na água com Gustavo Chumbão durante treino em Saquarema.*
+4. **Experiência Tow-in:** `assets/img/saquarema-barrel-church.jpg`  
+   *Tubo esmeralda cristalino com enquadramento emblemático da Igreja de Saquarema.*
+5. **Localidades (Saquarema & Barra):**  
+   - Saquarema: `assets/img/saquarema-church-wave.jpg`
+   - Barra da Tijuca: `assets/img/towin-massive-wave.jpg`
+6. **Galeria Editorial:** Grid assimétrico com as 6 melhores fotografias de alta resolução e modal lightbox interativo.
 
-### Com Python 3:
+---
+
+## 🚀 Principais Seções
+
+- **1. Hero:** Protagonismo para o surf rebocado, copy oficial, CTA direto e apoio geográfico.
+- **2. Legado:** Seção editorial com Gustavo Chumbão e a linhagem da família Chumbo no oceano.
+- **3. Estrutura Profissional:** Detalhes de equipamentos específicos, conhecimento técnico, suporte na água e planejamento conforme o mar.
+- **4. Experiência Tow-in:** A velocidade, a energia das ondas e a visão do mar sob uma nova perspectiva com foto protagonista do tubo.
+- **5. Localidades:** Destaque para Barra da Tijuca (RJ) e Saquarema (RJ), com canais diretos de consulta via WhatsApp.
+- **6. Galeria Real:** Coleção de imagens autênticas com ampliação fluida.
+- **7. FAQ:** Respostas claras para as principais dúvidas sobre tow-in.
+- **8. CTA Final:** Chamada de alta conversão para agendamento.
+- **WhatsApp Oficial:** Integrado com mensagem pré-formatada oficial:  
+  `Olá! Conheci a T-Chumbo Surf pelo site e gostaria de saber mais sobre a experiência de surf rebocado na Barra da Tijuca ou em Saquarema.`
+
+---
+
+## 🛠️ Tecnologias & Arquitetura
+
+- **HTML5 Semântico:** SEO otimizado, OpenGraph e dados estruturados Schema.org (`SportsActivityLocation`).
+- **CSS3 Vanilla Puro:** Tokens de design Ocean Performance, tipografia Google Fonts (`Outfit` e `Plus Jakarta Sans`), grid editorial e design mobile-first.
+- **JavaScript Vanilla:** Drawer mobile, accordion acessível, lightbox modal e revelação discreta com GSAP.
+- **Compatibilidade:** 100% responsivo para smartphones (a partir de 320px), tablets e desktops ultra-wide.
+
+---
+
+## 💻 Como Executar Localmente
+
 ```bash
 python3 -m http.server 8899
 ```
-Acesse no navegador: `http://localhost:8899`
-
----
-
-## 📁 Estrutura de Arquivos
-
-```text
-├── index.html                  # Página principal
-├── README.md                   # Documentação
-├── .gitignore                  # Arquivos ignorados pelo Git
-└── assets/
-    ├── css/
-    │   └── style.css           # Estilos e design system
-    ├── js/
-    │   └── main.js             # Lógica e interações
-    └── img/
-        ├── logo.png            # Logo oficial recortada com transparência
-        ├── favicon.png         # Ícone de aba
-        ├── hero-saquarema-aerial.jpg
-        ├── towin-action.jpg
-        ├── tchumbo-experience-highfive.jpg
-        ├── tchumbo-team-saquarema.jpg
-        ├── towin-massive-wave.jpg
-        ├── saquarema-church-wave.jpg
-        └── ocean-barrel.jpg
-```
+Acesse: `http://localhost:8899`
 
 ---
 
