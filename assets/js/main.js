@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // 4. GALERIA LIGHTBOX MODAL
   // ==========================================================================
-  const galleryItems = document.querySelectorAll('.gallery-item');
+  const galleryItems = document.querySelectorAll('.gallery-card, .gallery-item');
   const lightbox = document.getElementById('lightboxModal');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxTitle = document.getElementById('lightboxTitle');
@@ -112,18 +112,20 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
+    const handleOpen = () => {
       const img = item.querySelector('img');
-      const caption = item.querySelector('.gallery-caption')?.textContent || 'T-Chumbo Surf';
+      const caption = item.querySelector('.gallery-card-title')?.textContent || 
+                      item.querySelector('.gallery-caption')?.textContent || 
+                      'T-Chumbo Surf';
       if (img) openLightbox(img.src, caption);
-    });
+    };
+
+    item.addEventListener('click', handleOpen);
 
     item.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        const img = item.querySelector('img');
-        const caption = item.querySelector('.gallery-caption')?.textContent || 'T-Chumbo Surf';
-        if (img) openLightbox(img.src, caption);
+        handleOpen();
       }
     });
   });
@@ -206,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.editorial-layout',
     '.structure-grid',
     '.spots-grid',
-    '.gallery-grid'
+    '.gallery-duo-grid'
   ];
 
   fadeUpTargets.forEach(selector => {

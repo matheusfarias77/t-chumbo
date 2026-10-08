@@ -139,6 +139,18 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding-inline: 0.85rem;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     padding-inline: 2.25rem;
@@ -450,13 +462,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Seções e Cabeçalhos */
 .section {
-  padding-block: 4.5rem;
+  padding-block: 3.75rem;
   position: relative;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding-block: 6.5rem;
+    padding-block: 6rem;
   }
 }
 
@@ -495,8 +507,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   1. HERO CINEMATOGRÁFICO — REFINADO (PRIMEIRA DOBRA LIMPA)
-   Sem mouse, sem scroll indicator, sem checkmarks, sem excesso de espaço vazio
+   1. HERO CINEMATOGRÁFICO — OCEAN PERFORMANCE
+   Comunicação limpa, sem elementos desnecessários, CTA destacado e tipografia fluida
    ========================================================================== */
 .hero-section {
   position: relative;
@@ -505,7 +517,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   padding-top: calc(var(--header-height) + 1.25rem);
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.25rem;
   overflow: hidden;
   background-color: var(--ocean-deep);
 }
@@ -513,7 +525,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .hero-section {
     min-height: 100svh;
-    padding-top: calc(var(--header-height) + 2rem);
+    padding-top: calc(var(--header-height) + 1.5rem);
     padding-bottom: 3.5rem;
   }
 }
@@ -530,8 +542,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 28%;
-  filter: brightness(0.9);
+  object-position: center 25%;
+  filter: brightness(0.88);
 }
 
 .hero-overlay {
@@ -539,8 +551,8 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(7, 19, 30, 0.5) 0%,
-    rgba(7, 19, 30, 0.65) 45%,
+    rgba(7, 19, 30, 0.55) 0%,
+    rgba(7, 19, 30, 0.68) 45%,
     rgba(7, 19, 30, 0.92) 85%,
     #07131E 100%
   );
@@ -559,12 +571,13 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.35rem 0.95rem;
+  padding: 0.35rem 0.9rem;
   background: rgba(7, 19, 30, 0.78);
   border: 1px solid rgba(84, 189, 229, 0.35);
   border-radius: var(--radius-sm);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.15rem;
   backdrop-filter: blur(8px);
+  max-width: 95%;
 }
 
 .badge-dot {
@@ -573,23 +586,34 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   background-color: var(--accent-blue);
   box-shadow: 0 0 8px var(--accent-blue);
+  flex-shrink: 0;
 }
 
 .badge-text {
   font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-ice);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 360px) {
+  .badge-text {
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+  }
 }
 
 .hero-title {
-  font-size: clamp(1.65rem, 4.4vw, 3.4rem);
+  font-size: clamp(1.65rem, 5vw, 3.4rem);
   font-weight: 900;
   letter-spacing: -0.02em;
   line-height: 1.12;
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.95rem;
   color: var(--text-ice);
   text-transform: uppercase;
 }
@@ -601,51 +625,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-subtitle {
-  font-size: clamp(0.92rem, 1.2vw, 1.12rem);
-  line-height: 1.58;
-  color: #d1dde8;
-  margin-bottom: 1.75rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-ice);
+  margin-bottom: 0.65rem;
   max-width: 680px;
   margin-inline: auto;
 }
 
-.hero-cta-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
+.hero-description {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  line-height: 1.6;
+  color: #c9d8e6;
+  margin-bottom: 1.75rem;
+  max-width: 650px;
+  margin-inline: auto;
 }
 
-@media (min-width: 640px) {
-  .hero-cta-group {
-    flex-direction: row;
-    gap: 1rem;
+@media (max-width: 480px) {
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.35rem;
   }
+}
+
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-cta-group .btn {
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
+  padding: 0.95rem 1.85rem;
+  font-size: 0.94rem;
 }
 
 @media (min-width: 640px) {
   .hero-cta-group .btn {
     width: auto;
     max-width: none;
+    font-size: 0.96rem;
   }
-}
-
-/* Apoio Hero: Para iniciantes e surfistas experientes */
-.hero-support-text {
-  display: block;
-  font-size: 0.84rem;
-  color: var(--accent-blue);
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-top: 0.25rem;
 }
 
 /* ==========================================================================
@@ -671,7 +696,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .level-card {
-  padding: 2.25rem 2rem;
+  padding: 1.75rem 1.4rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
@@ -679,6 +704,18 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: space-between;
   transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+@media (max-width: 360px) {
+  .level-card {
+    padding: 1.4rem 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .level-card {
+    padding: 2.25rem 2rem;
+  }
 }
 
 .level-card:hover {
@@ -905,11 +942,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .structure-item {
-  padding: 1.5rem;
+  padding: 1.35rem 1.25rem;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .structure-item {
+    padding: 1.5rem;
+  }
 }
 
 .structure-item:hover {
@@ -1037,10 +1080,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .spot-content {
-  padding: 2rem 1.75rem;
+  padding: 1.65rem 1.35rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+@media (max-width: 360px) {
+  .spot-content {
+    padding: 1.35rem 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .spot-content {
+    padding: 2rem 1.75rem;
+  }
 }
 
 .spot-content h3 {
@@ -1093,90 +1148,119 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   6. GALERIA EDITORIAL COM FOTOS REAIS (#galeria)
+   6. GALERIA PREMIUM DE FOTOS REAIS (#galeria)
+   Dois cards editoriais grandes lado a lado no desktop, verticais no mobile
    ========================================================================== */
 .section-gallery {
   background-color: var(--ocean-deep);
+  position: relative;
 }
 
-.gallery-grid {
+.gallery-duo-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.15rem;
+  gap: 1.5rem;
+  max-width: 1080px;
+  margin-inline: auto;
 }
 
-@media (min-width: 640px) {
-  .gallery-grid {
+@media (min-width: 768px) {
+  .gallery-duo-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 300px;
-  }
-
-  .gallery-item:nth-child(1) {
-    grid-column: span 2;
-  }
-  .gallery-item:nth-child(4) {
-    grid-column: span 2;
-  }
-}
-
-.gallery-item {
+.gallery-card {
   position: relative;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  height: 260px;
-  cursor: pointer;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  aspect-ratio: 4 / 5;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.4s ease;
 }
 
 @media (min-width: 1024px) {
-  .gallery-item {
-    height: 100%;
+  .gallery-card {
+    aspect-ratio: 3 / 4;
+    min-height: 520px;
   }
 }
 
-.gallery-item img {
+.gallery-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(84, 189, 229, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 24px rgba(84, 189, 229, 0.15);
+}
+
+.gallery-card-media {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease, filter 0.3s ease;
+  object-position: center center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.02);
+.gallery-card:hover .gallery-card-media img {
+  transform: scale(1.035);
   filter: brightness(1.04);
 }
 
-.gallery-overlay {
+.gallery-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(7, 19, 30, 0.88) 0%, rgba(7, 19, 30, 0.1) 60%, transparent 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1.25rem;
+  padding: 1.75rem 1.4rem;
+  background: linear-gradient(
+    180deg,
+    transparent 45%,
+    rgba(7, 19, 30, 0.25) 60%,
+    rgba(7, 19, 30, 0.85) 80%,
+    rgba(7, 19, 30, 0.96) 100%
+  );
+  pointer-events: none;
 }
 
-.gallery-tag {
-  font-size: 0.7rem;
+@media (min-width: 768px) {
+  .gallery-card-overlay {
+    padding: 2.25rem 2rem;
+  }
+}
+
+.gallery-card-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent-blue);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.45rem;
 }
 
-.gallery-caption {
-  font-size: 0.92rem;
-  font-weight: 600;
+.gallery-card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.4vw, 1.95rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
   color: var(--text-ice);
-  line-height: 1.3;
+  line-height: 1.15;
+  margin: 0;
 }
 
 /* Lightbox Modal */
