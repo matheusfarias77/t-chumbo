@@ -506,6 +506,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.65;
 }
 
+.reveal-wrap {
+  display: block;
+  overflow: hidden;
+}
+
+.reveal-line {
+  display: block;
+  will-change: transform, opacity;
+}
+
 /* ==========================================================================
    1. HERO CINEMATOGRÁFICO — OCEAN PERFORMANCE
    Comunicação limpa, sem elementos desnecessários, CTA destacado e tipografia fluida
@@ -517,9 +527,17 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   padding-top: calc(var(--header-height) + 1.25rem);
-  padding-bottom: 2.25rem;
+  padding-bottom: 2.5rem;
   overflow: hidden;
   background-color: var(--ocean-deep);
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 1.75rem);
+    padding-bottom: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -567,20 +585,22 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+/* Etiqueta superior da hero (Mobile em 2 linhas, Desktop em 1 linha) */
 .hero-badge {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.22rem;
-  padding: 0.45rem 1.15rem;
-  background: rgba(7, 19, 30, 0.82);
-  border: 1px solid rgba(84, 189, 229, 0.35);
+  gap: 0.28rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(7, 19, 30, 0.9);
+  border: 1px solid rgba(84, 189, 229, 0.38);
   border-radius: var(--radius-sm);
-  margin-bottom: 1.15rem;
-  backdrop-filter: blur(8px);
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   max-width: 100%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 0 10px rgba(84, 189, 229, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), 0 0 12px rgba(84, 189, 229, 0.12);
   text-align: center;
 }
 
@@ -602,12 +622,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .badge-brand {
   font-family: var(--font-heading);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-ice);
   line-height: 1.2;
+  white-space: normal;
 }
 
 .badge-sep {
@@ -616,23 +637,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .badge-locations {
   font-family: var(--font-heading);
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.68rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent-blue);
-  line-height: 1.2;
+  line-height: 1.25;
+  white-space: normal;
 }
 
 @media (min-width: 640px) {
   .hero-badge {
     flex-direction: row;
     gap: 0.45rem;
-    padding: 0.35rem 0.95rem;
+    padding: 0.4rem 1.15rem;
   }
 
   .badge-brand {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   .badge-sep {
@@ -645,6 +668,7 @@ h1, h2, h3, h4, h5, h6 {
   .badge-locations {
     font-size: 0.72rem;
     color: var(--text-ice);
+    white-space: nowrap;
   }
 }
 
@@ -700,16 +724,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-cta-group .btn {
   width: 100%;
-  max-width: 340px;
-  padding: 0.95rem 1.85rem;
-  font-size: 0.94rem;
+  max-width: 320px;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.88rem;
+  min-height: 48px;
 }
 
 @media (min-width: 640px) {
   .hero-cta-group .btn {
     width: auto;
     max-width: none;
-    font-size: 0.96rem;
+    padding: 0.95rem 1.85rem;
+    font-size: 0.95rem;
   }
 }
 
